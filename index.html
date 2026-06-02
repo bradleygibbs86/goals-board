@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Active Goals Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #0f0f0f;
+    color: #e8e4dc;
+    padding: 2rem 1.5rem 4rem;
+    min-height: 100vh;
+  }
+
+  .board {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .board-header {
+    padding: 2.5rem 0 2rem;
+    border-bottom: 1px solid #2a2a2a;
+    margin-bottom: 2.5rem;
+  }
+
+  .board-header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #f0ebe0;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+  }
+
+  .board-header p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.4rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 1rem;
+    padding-left: 1.25rem;
+    border-left: 2px solid #2a2a2a;
+  }
+
+  .goal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .goal-card {
+    background: #161616;
+    border: 1px solid #222;
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.4rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    transition: background 0.15s;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .goal-card:hover {
+    background: #1c1c1c;
+  }
+
+  .goal-card .goal-name {
+    font-size: 0.975rem;
+    font-weight: 500;
+    color: #e8e4dc;
+    line-height: 1.4;
+  }
+
+  .goal-card .goal-area {
+    font-size: 0.72rem;
+    color: #555;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 0.2rem;
+  }
+
+  .goal-card .goal-link {
+    font-size: 0.72rem;
+    color: var(--accent);
+    opacity: 0.7;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+  }
+
+  .goal-card:hover .goal-link {
+    opacity: 1;
+  }
+
+  .section-placeholder {
+    background: #111;
+    border: 1px dashed #222;
+    border-radius: 6px;
+    padding: 1.25rem 1.4rem;
+    font-size: 0.82rem;
+    color: #444;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+  }
+
+  .dtc { --accent: #8b7cf6; }
+  .sb  { --accent: #4ade80; }
+  .bg  { --accent: #f59e0b; }
+
+  .section-block { margin-bottom: 3rem; }
+</style>
+</head>
+<body>
+<div class="board">
+
+  <div class="board-header">
+    <h1>Active Goals</h1>
+    <p>Defined &middot; Committed &middot; In motion</p>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">DTC &mdash; EOS Rocks Q2 2026</div>
+    <div class="goal-list">
+
+      <a class="goal-card dtc" href="https://app.clickup.com/t/86c8uannk" target="_blank">
+        <div>
+          <div class="goal-name">60 MQLs Generated per Month</div>
+          <div class="goal-area">Lead Generation &mdash; Ramp: 40 April &rarr; 50 May &rarr; 60 June</div>
+        </div>
+        <div class="goal-link">View &rarr;</div>
+      </a>
+
+      <a class="goal-card dtc" href="https://app.clickup.com/t/86c9c4f0e" target="_blank">
+        <div>
+          <div class="goal-name">Account Based Marketing</div>
+          <div class="goal-area">Growth &mdash; 20 meetings across 10 accounts by 31 July</div>
+        </div>
+        <div class="goal-link">View &rarr;</div>
+      </a>
+
+      <a class="goal-card dtc" href="https://app.clickup.com/t/86c9h263t" target="_blank">
+        <div>
+          <div class="goal-name">100% of Products and Data Fields Complete</div>
+          <div class="goal-area">Catalogue &mdash; Full enrichment across all active SKUs</div>
+        </div>
+        <div class="goal-link">View &rarr;</div>
+      </a>
+
+      <a class="goal-card dtc" href="https://app.clickup.com/t/86c6nddrf" target="_blank">
+        <div>
+          <div class="goal-name">100% of BAXT Products Complete to 85%</div>
+          <div class="goal-area">Catalogue &mdash; 466 SKUs, alternative and related product matching</div>
+        </div>
+        <div class="goal-link">View &rarr;</div>
+      </a>
+
+      <a class="goal-card dtc" href="https://app.clickup.com/t/86c8gp70n" target="_blank">
+        <div>
+          <div class="goal-name">DTC HUB Upgrades</div>
+          <div class="goal-area">DTC HUB &mdash; Rep and customer-facing platform improvements</div>
+        </div>
+        <div class="goal-link">View &rarr;</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Savouri &mdash; Active Goals</div>
+    <div class="section-placeholder">Goals to be added.</div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">BG Personal &mdash; Active Goals</div>
+    <div class="section-placeholder">Goals to be added.</div>
+  </div>
+
+</div>
+</body>
+</html>
